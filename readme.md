@@ -17,7 +17,7 @@ For more detailed insights and the creative process behind this project, visit o
 
 ## Setup
 
-Download [Node.js](https://nodejs.org/en/download/).
+Download
 
 Run these commands:
 
