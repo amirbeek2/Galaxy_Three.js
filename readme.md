@@ -9,7 +9,7 @@ The project uses **dat.GUI** to create an interface for adjusting parameters in 
 ### Live Demo:
 You can view the live version of the Galaxy Generator on Vercel here:  
 [Galaxy Generator on Vercel](https://galaxy-three-js-7la4.vercel.app/)
-
+[For More Information Behance.net](https://www.behance.net/gallery/216288721/Galaxy-Visualization-Threejs)
 ## Setup
 
 Download [Node.js](https://nodejs.org/en/download/).
