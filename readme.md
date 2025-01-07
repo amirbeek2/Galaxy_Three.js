@@ -7,10 +7,14 @@ This project demonstrates the creation of a **Galaxy Generator** using **Three.j
 The project uses **dat.GUI** to create an interface for adjusting parameters in real-time, allowing for an interactive experience.
 
 ### Live Demo:
-You can view the live version of the Galaxy Generator on Vercel here:  
-[Galaxy Generator on Vercel](https://galaxy-three-js-7la4.vercel.app/)
+Experience the Galaxy Generator in action! Check out the live version hosted on Vercel:
 
-[For More Information Behance.net](https://www.behance.net/gallery/216288721/Galaxy-Visualization-Threejs)
+[🌌 Galaxy Generator on Vercel](https://galaxy-three-js-7la4.vercel.app/)
+
+For more detailed insights and the creative process behind this project, visit our Behance project page:
+
+[🎨 Galaxy Visualization on Behance](https://www.behance.net/gallery/216288721/Galaxy-Visualization-Threejs)
+
 ## Setup
 
 Download [Node.js](https://nodejs.org/en/download/).
