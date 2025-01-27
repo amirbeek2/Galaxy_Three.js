@@ -15,6 +15,8 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+const listener = new THREE.AudioListener();
+camera.add(listener)
 /**
  * Test cube
  */
@@ -28,6 +30,9 @@ const scene = new THREE.Scene()
 /**
  *   Galaxy
  */
+
+const sound = new THREE.Audio(listener);
+
 const parameters = {
     count:100000,
     size:0.01,
@@ -131,6 +136,15 @@ gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy)
 /**
  * Sizes
  */
+
+// Load a sound and set it as the Audio object's buffer
+const audioLoader = new THREE.AudioLoader();
+audioLoader.load('./universe-space-sounds-3595.mp3', function(buffer) {
+    sound.setBuffer(buffer);
+    sound.setLoop(true);
+    sound.setVolume(0.5);
+    sound.play();
+});
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -182,21 +196,14 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
-    const rotationSpeed = 0.001; // Adjust this to control the speed
-
-    // Update rotation angle by a fixed value
+    const rotationSpeed = 0.003; 
+    
     parameters.rotationY += rotationSpeed
 
-    // Apply the updated rotation to the galaxy
     points.rotation.y = parameters.rotationY
 
-    // Update controls
     controls.update()
-
-    // Render
     renderer.render(scene, camera)
-
-    // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
 
