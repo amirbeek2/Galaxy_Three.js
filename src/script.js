@@ -182,7 +182,7 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
-    const rotationSpeed = 0.001; // Adjust this to control the speed
+    const rotationSpeed = 0.003; // Adjust this to control the speed
 
     // Update rotation angle by a fixed value
     parameters.rotationY += rotationSpeed
