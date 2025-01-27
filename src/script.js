@@ -15,6 +15,8 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+const listener = new THREE.AudioListener();
+camera.add(listener)
 /**
  * Test cube
  */
@@ -28,6 +30,9 @@ const scene = new THREE.Scene()
 /**
  *   Galaxy
  */
+
+const sound = new THREE.Audio(listener);
+
 const parameters = {
     count:100000,
     size:0.01,
@@ -131,6 +136,15 @@ gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy)
 /**
  * Sizes
  */
+
+// Load a sound and set it as the Audio object's buffer
+const audioLoader = new THREE.AudioLoader();
+audioLoader.load('https://example.com/path_to_your_audio.mp3', function(buffer) {
+    sound.setBuffer(buffer);
+    sound.setLoop(true);
+    sound.setVolume(0.5);
+    sound.play();
+});
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
