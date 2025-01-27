@@ -182,21 +182,14 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
-    const rotationSpeed = 0.003; // Adjust this to control the speed
-
-    // Update rotation angle by a fixed value
+    const rotationSpeed = 0.003; 
+    
     parameters.rotationY += rotationSpeed
 
-    // Apply the updated rotation to the galaxy
     points.rotation.y = parameters.rotationY
 
-    // Update controls
     controls.update()
-
-    // Render
     renderer.render(scene, camera)
-
-    // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
 
